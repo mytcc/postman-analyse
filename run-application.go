@@ -1,4 +1,3 @@
-//go:generate statik.exe -src=./resource -include=*.jpg,*.txt,*.html,*.css,*.js
 
 package main
 
@@ -6,20 +5,14 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"log"
 	"net/http"
 	"postman-analyse/analyse"
 	"time"
-	"github.com/rakyll/statik/fs"
-	_ "postman-analyse/generator" // TODO: Replace with the absolute import path
 )
 
 
 func main() {
-	_, err := fs.New()
-	if err != nil {
-		log.Fatal(err)
-	}
+
 
 	r:=gin.New()
 	r.Static("/view", "./resource")
@@ -28,7 +21,7 @@ func main() {
 	r.Static("/settings", "./resource/settings")
 	r.Static("/styles", "./resource/styles")
     //设置环境
-    analyse.Profile="prod"
+    //analyse.Profile="prod"
 	//处理Json请求
 	r.POST("/api/examples/2742622/SzzkdxWs.json", func(context *gin.Context) {
 		//判断是否已经解析过
