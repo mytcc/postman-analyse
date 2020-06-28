@@ -1,0 +1,2 @@
+{"languageSettings":{"key":"http","variant":"HTTP","label":"HTTP","options":[{"name":"Trim request body fields","id":"trimRequestBody","type":"boolean","description":"Remove white space and additional lines that may affect the server's response","value":false},{"name":"Prettify","id":"prettify","value":true,"description":"Enabling
+this will ensure a prettified output for the generated code.","type":"boolean"}]},"status":"success"}

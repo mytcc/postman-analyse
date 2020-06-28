@@ -1,0 +1,285 @@
+{
+  "data": [
+    {
+      "item_id": "f04b774d-1d09-449a-98c4-1ee2ec4b41be",
+      "example": [
+        {
+          "name": "1、测试GET接口响应1",
+          "response": {
+            "_postman_previewlanguage": "json",
+            "body": "{\n\t\"hello\":\"yes\"\n}",
+            "code": null,
+            "header": null,
+            "status": null
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "token",
+                "value": "af516df42b7abc14a4178fc3a9faed41605c7a0a922cd3205af20ba60a27488e",
+                "type": "text",
+                "description": "用户登陆Token"
+              }
+            ],
+            "url": "http://localhost:8081/sys/freeBalance?current=1&size=10",
+            "description": "<p>描述OKOOK</p>\n",
+            "urlObject": {
+              "path": [
+                "sys",
+                "freeBalance"
+              ],
+              "host": [
+                "http://localhost:8081"
+              ],
+              "query": [
+                {
+                  "description": {
+                    "content": "<p>当前页数</p>\n",
+                    "type": "text/plain"
+                  },
+                  "key": "current",
+                  "value": "1"
+                },
+                {
+                  "description": {
+                    "content": "<p>每页条数</p>\n",
+                    "type": "text/plain"
+                  },
+                  "key": "size",
+                  "value": "10"
+                }
+              ],
+              "variable": []
+            }
+          },
+          "snippet": {
+            "http": "http://localhost:8081/sys/freeBalance?current=1&size=10"
+          }
+        },
+        {
+          "name": "2、测试GET接口响应2",
+          "response": {
+            "_postman_previewlanguage": "json",
+            "body": "{\n    \"code\": 0,\n    \"msg\": \"successful\",\n    \"data\": {\n        \"pageCurrent\": 1,\n        \"totalPage\": 1,\n        \"dataList\": [\n            {\n                \"changeType\": 2, //变动类型（1：充币，2：提币，3：买币，4：卖币，5：下线充值，6：游戏收益）\n                \"bureauType\": 2, //游戏模式（1：四进三出，2：五进四出）\n                \"bureauNum\": 1010, //游戏期数\n                \"changeAmount\": \"-100\",\n                \"createTime\": 1554279045538\n            },\n            {\n                \"changeType\": 1,\n                \"bureauType\": null,\n                \"bureauNum\": null,\n                \"changeAmount\": \"500.5\",\n                \"createTime\": 1554279045517\n            },\n            {\n                \"changeType\": 6,\n                \"bureauType\": 1,\n                \"bureauNum\": 1009,\n                \"changeAmount\": \"100\",\n                \"createTime\": 1554278660585\n            },\n            {\n                \"changeType\": 5,\n                \"bureauType\": null,\n                \"bureauNum\": null,\n                \"changeAmount\": \"1000\",\n                \"createTime\": 1554278660563\n            },\n            {\n                \"changeType\": 4,\n                \"bureauType\": null,\n                \"bureauNum\": null,\n                \"changeAmount\": \"-300\",\n                \"createTime\": 1554275931561\n            },\n            {\n                \"changeType\": 3,\n                \"bureauType\": null,\n                \"bureauNum\": null,\n                \"changeAmount\": \"100\",\n                \"createTime\": 1554274263538\n            }\n        ]\n    }\n}",
+            "code": 200,
+            "header": [
+              {
+                "key": "Transfer-Encoding",
+                "value": "chunked"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json;charset=UTF-8"
+              },
+              {
+                "key": "Date",
+                "value": "Wed, 03 Apr 2019 10:28:21 GMT"
+              },
+              {
+                "key": "Keep-Alive",
+                "value": "timeout=58"
+              }
+            ],
+            "status": "OK"
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "token",
+                "value": "af516df42b7abc14a4178fc3a9faed41605c7a0a922cd3205af20ba60a27488e",
+                "type": "text",
+                "description": "用户登陆Token"
+              }
+            ],
+            "url": "http://localhost:8081/sys/freeBalance?current=1&size=10",
+            "description": "<p>描述OKOOK</p>\n",
+            "urlObject": {
+              "path": [
+                "sys",
+                "freeBalance"
+              ],
+              "host": [
+                "http://localhost:8081"
+              ],
+              "query": [
+                {
+                  "description": {
+                    "content": "<p>当前页数</p>\n",
+                    "type": "text/plain"
+                  },
+                  "key": "current",
+                  "value": "1"
+                },
+                {
+                  "description": {
+                    "content": "<p>每页条数</p>\n",
+                    "type": "text/plain"
+                  },
+                  "key": "size",
+                  "value": "10"
+                }
+              ],
+              "variable": []
+            }
+          },
+          "snippet": {
+            "http": "http://localhost:8081/sys/freeBalance?current=1&size=10"
+          }
+        }
+      ]
+    },
+    {
+      "item_id": "c67e332c-5c2f-4daf-b3f7-0500e072989b",
+      "example": [
+        {
+          "name": "1、用户修改昵称响应内容",
+          "response": {
+            "_postman_previewlanguage": "json",
+            "body": "{\n    \"code\": 0,\n    \"msg\": \"\",\n    \"data\": \"修改成功\"\n}",
+            "code": 200,
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json;charset=UTF-8"
+              },
+              {
+                "key": "Transfer-Encoding",
+                "value": "chunked"
+              },
+              {
+                "key": "Date",
+                "value": "Sat, 29 Dec 2018 06:37:25 GMT"
+              }
+            ],
+            "status": "OK"
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "token",
+                "type": "text",
+                "value": "af516df42b7abc14a4178fc3a9faed41605c7a0a922cd3205af20ba60a27488e"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"nickName\":\"Hello\"\n}",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "http://localhost:8081/users/profile",
+            "urlObject": {
+              "path": [
+                "users",
+                "profile"
+              ],
+              "host": [
+                "http://localhost:8081"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "description": "<p>暂无描述</p>\n"
+          },
+          "snippet": {
+            "http": "http://localhost:8081/users/profile"
+          }
+        }
+      ]
+    },
+    {
+      "item_id": "a31cdb2c-c17c-426f-a217-55b3f7e3501d",
+      "example": [
+        {
+          "name": "1、查看用户基本信息响应内容",
+          "response": {
+            "_postman_previewlanguage": "json",
+            "body": "{\n    \"code\": 0,\n    \"msg\": \"\",\n    \"data\": \"修改成功\"\n}",
+            "code": 200,
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json;charset=UTF-8"
+              },
+              {
+                "key": "Transfer-Encoding",
+                "value": "chunked"
+              },
+              {
+                "key": "Date",
+                "value": "Sat, 29 Dec 2018 06:37:25 GMT"
+              }
+            ],
+            "status": "OK"
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "token",
+                "type": "text",
+                "value": "af516df42b7abc14a4178fc3a9faed41605c7a0a922cd3205af20ba60a27488e"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"nickName\":\"Hello\"\n}",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "http://localhost:8081/users/profile?id=1234&name=张三",
+            "urlObject": {
+              "path": [
+                "users",
+                "profile"
+              ],
+              "host": [
+                "http://localhost:8081"
+              ],
+              "query": [
+                {
+                  "description": {
+                    "content": "<p>用户ID</p>\n",
+                    "type": "text/plain"
+                  },
+                  "key": "id",
+                  "value": "1234"
+                },
+                {
+                  "description": {
+                    "content": "<p>用户姓名</p>\n",
+                    "type": "text/plain"
+                  },
+                  "key": "name",
+                  "value": "张三"
+                }
+              ],
+              "variable": []
+            },
+            "description": "<p>暂无描述</p>\n"
+          },
+          "snippet": {
+            "http": "http://localhost:8081/users/profile?id=1234&name=张三"
+          }
+        }
+      ]
+    }
+  ]
+}
