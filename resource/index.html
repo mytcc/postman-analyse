@@ -16,13 +16,13 @@
     <meta name="languages" content="[{&quot;key&quot;:&quot;csharp&quot;,&quot;label&quot;:&quot;C#&quot;,&quot;variant&quot;:&quot;RestSharp&quot;},{&quot;key&quot;:&quot;curl&quot;,&quot;label&quot;:&quot;cURL&quot;,&quot;variant&quot;:&quot;cURL&quot;},{&quot;key&quot;:&quot;go&quot;,&quot;label&quot;:&quot;Go&quot;,&quot;variant&quot;:&quot;Native&quot;},{&quot;key&quot;:&quot;http&quot;,&quot;label&quot;:&quot;HTTP&quot;,&quot;variant&quot;:&quot;HTTP&quot;},{&quot;key&quot;:&quot;java&quot;,&quot;label&quot;:&quot;Java&quot;,&quot;variant&quot;:&quot;OkHttp&quot;},{&quot;key&quot;:&quot;java&quot;,&quot;label&quot;:&quot;Java&quot;,&quot;variant&quot;:&quot;Unirest&quot;},{&quot;key&quot;:&quot;javascript&quot;,&quot;label&quot;:&quot;JavaScript&quot;,&quot;variant&quot;:&quot;Fetch&quot;},{&quot;key&quot;:&quot;javascript&quot;,&quot;label&quot;:&quot;JavaScript&quot;,&quot;variant&quot;:&quot;jQuery&quot;},{&quot;key&quot;:&quot;javascript&quot;,&quot;label&quot;:&quot;JavaScript&quot;,&quot;variant&quot;:&quot;XHR&quot;},{&quot;key&quot;:&quot;c&quot;,&quot;label&quot;:&quot;C&quot;,&quot;variant&quot;:&quot;libcurl&quot;},{&quot;key&quot;:&quot;nodejs&quot;,&quot;label&quot;:&quot;NodeJs&quot;,&quot;variant&quot;:&quot;Native&quot;},{&quot;key&quot;:&quot;nodejs&quot;,&quot;label&quot;:&quot;NodeJs&quot;,&quot;variant&quot;:&quot;Request&quot;},{&quot;key&quot;:&quot;nodejs&quot;,&quot;label&quot;:&quot;NodeJs&quot;,&quot;variant&quot;:&quot;Unirest&quot;},{&quot;key&quot;:&quot;objective-c&quot;,&quot;label&quot;:&quot;Objective-C&quot;,&quot;variant&quot;:&quot;NSURLSession&quot;},{&quot;key&quot;:&quot;ocaml&quot;,&quot;label&quot;:&quot;OCaml&quot;,&quot;variant&quot;:&quot;Cohttp&quot;},{&quot;key&quot;:&quot;php&quot;,&quot;label&quot;:&quot;PHP&quot;,&quot;variant&quot;:&quot;cURL&quot;},{&quot;key&quot;:&quot;php&quot;,&quot;label&quot;:&quot;PHP&quot;,&quot;variant&quot;:&quot;HTTP_Request2&quot;},{&quot;key&quot;:&quot;php&quot;,&quot;label&quot;:&quot;PHP&quot;,&quot;variant&quot;:&quot;pecl_http&quot;},{&quot;key&quot;:&quot;powershell&quot;,&quot;label&quot;:&quot;PowerShell&quot;,&quot;variant&quot;:&quot;RestMethod&quot;},{&quot;key&quot;:&quot;python&quot;,&quot;label&quot;:&quot;Python&quot;,&quot;variant&quot;:&quot;http.client&quot;},{&quot;key&quot;:&quot;python&quot;,&quot;label&quot;:&quot;Python&quot;,&quot;variant&quot;:&quot;Requests&quot;},{&quot;key&quot;:&quot;ruby&quot;,&quot;label&quot;:&quot;Ruby&quot;,&quot;variant&quot;:&quot;Net::HTTP&quot;},{&quot;key&quot;:&quot;shell&quot;,&quot;label&quot;:&quot;Shell&quot;,&quot;variant&quot;:&quot;Httpie&quot;},{&quot;key&quot;:&quot;shell&quot;,&quot;label&quot;:&quot;Shell&quot;,&quot;variant&quot;:&quot;wget&quot;},{&quot;key&quot;:&quot;swift&quot;,&quot;label&quot;:&quot;Swift&quot;,&quot;variant&quot;:&quot;URLSession&quot;}]">
 
 
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700,800' rel='stylesheet' type='text/css'>
+    <link href="/styles/googleapis.css" rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="/styles/production.min.css?v=1.15.0">
     <link rel="stylesheet" type="text/css" href="/styles/custom.css?top-bar=FFFFFF&right-sidebar=303030&highlight=EF5B25&">
 
-    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="shortcut icon" href="/view/favicon.ico" />
 
-    <link rel="stylesheet" href="https://run.pstmn.io/button.css">
+    <link rel="stylesheet" href="/styles/button.css">
 
     <script src="/js/messenger-setup.js" nonce="HYzYHgqoDwx95tiTQbSlxLtrQwKt4YZFFqWUleEUOxH9JRBB"></script>
     <meta property="og:title" content="Ruoli-API" />
@@ -43,9 +43,16 @@
         .example-request__snippet,.example-response__header,.documentation-body #intro .examples{
             display: none;
         }
-        .sidebar{
+        .sidebar,.content-container{
             top:10px;
         }
+        @media (max-width:47.9em) {
+            .content-container {
+                margin-top: 10px;
+            }
+        }
+
+
     </style>
 </head>
 
@@ -299,7 +306,7 @@
         </div>
     </div>
 
-    <script src="https://cdn.ravenjs.com/3.26.2/raven.min.js" nonce="HYzYHgqoDwx95tiTQbSlxLtrQwKt4YZFFqWUleEUOxH9JRBB" crossorigin="anonymous"></script>
+    <script src="/js/raven.min.js" nonce="HYzYHgqoDwx95tiTQbSlxLtrQwKt4YZFFqWUleEUOxH9JRBB" crossorigin="anonymous"></script>
     <script src="/js/production.min.js?v=1.15.0" nonce="HYzYHgqoDwx95tiTQbSlxLtrQwKt4YZFFqWUleEUOxH9JRBB" id="script-data-scope" data-var-user-id="2742622" data-var-environment="production" data-var-team-id="124420" data-var-host="" data-var-version="1.15.0"
         data-var-sentry-dsn="https://714c749bafde4552896bc6298c2c28a6@sentry.postmanlabs.com/11"></script>
 
