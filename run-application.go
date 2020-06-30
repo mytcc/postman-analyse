@@ -7,6 +7,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"net/http"
 	"postman-analyse/analyse"
+	"strconv"
+	"strings"
 	"time"
 )
 
@@ -50,8 +52,18 @@ func main() {
 	//r.POST("/register",controller.Register)//注册
 	//r.GET("logout",controller.Logout)
 	//auth:=r.Use(middleware.TokenAuth)
-	if err:=r.Run(":80");err!=nil{
-		fmt.Println("发生错误："+err.Error())
-		time.Sleep(time.Duration(20)*time.Second)
+	ports:=80
+	for{
+		if err:=r.Run(":"+strconv.Itoa(ports));err!=nil{
+			error:=string(err.Error())
+			if strings.Contains(error,"bind: Only one usage of each socket address"){
+				ports++
+			}else{
+				fmt.Println("发生错误："+err.Error())
+				break
+			}
+		}
 	}
+	time.Sleep(time.Duration(5)*time.Minute)
+
 }
